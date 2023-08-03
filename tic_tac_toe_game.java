@@ -1,13 +1,12 @@
-//Tman project
-import java.util.*;
+//Tman project of tic tac toe game
+import java.util.Scanner;
  
 public class project2 {
    
     static String[] board;
     static String turn;
-   
-   
-    
+
+ 
     static String checkWinner()
     {
         for (int a = 0; a < 8; a++) {
@@ -39,12 +38,12 @@ public class project2 {
                 line = board[2] + board[4] + board[6];
                 break;
             }
-            //For X winner
+            //For X winner.
             if (line.equals("XXX")) {
                 return "X";
             }
              
-            // For O winner
+            // For O winner.
             else if (line.equals("OOO")) {
                 return "O";
             }
@@ -60,14 +59,14 @@ public class project2 {
             }
         }
  
-       // To enter the X Or O at the exact place on board.
+       // To enter the X Or O .
         System.out.println(
             turn + "'s turn; enter a slot number to place "
             + turn + " in:");
         return null;
     }
      
-    // To print out the board.
+    // printing out the board.
     /* |---|---|---|
        | 1 | 2 | 3 |
        |-----------|
@@ -150,20 +149,20 @@ public class project2 {
             }
         }
        
-        // If no one win or lose from both player x and O.
-        // then here is the logic to print "draw".
+        // If the is no one who win or lose from both player x and O.
+        // then print it's a"draw".
         if (winner.equalsIgnoreCase("draw")) {
             System.out.println(
                 "It's a draw! Thanks for playing.");
         }
        
-        // For winner -to display Congratulations! message.
+        //  displaying winner Congratulations! message.
         else {
             System.out.println(
                 "Congratulations! " + winner
-                + "'s have won! Thanks for playing.");
+                + "'s have won! Thanks for playing well.");
         }
       in.close();
-      //End of the program.....
+      //End of a program.....
     }
 }
